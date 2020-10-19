@@ -137,7 +137,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602945552334</updated>
-      <workItem from="1602945553463" duration="4351000" />
+      <workItem from="1602945553463" duration="9833000" />
     </task>
     <servers />
   </component>
@@ -145,10 +145,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="374" y="135" width="618" height="522" key="find.popup" timestamp="1602951184771">
+    <state x="374" y="135" width="618" height="522" key="find.popup" timestamp="1603110149613">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="374" y="135" width="618" height="522" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1602951184771" />
+    <state x="374" y="135" width="618" height="522" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1603110149613" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -157,6 +157,11 @@
           <url>file://$PROJECT_DIR$/app/Providers/EventServiceProvider.php</url>
           <line>4</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/home/aside.blade.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

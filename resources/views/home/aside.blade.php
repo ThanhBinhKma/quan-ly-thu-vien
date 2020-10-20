@@ -24,7 +24,7 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item has-treeview">
-                    <a href="#" class="nav-link">
+                    <a href="{{route('user.index')}}" class="nav-link">
                         <i class="nav-icon far fa-envelope"></i>
                         <p>
                             User
@@ -33,7 +33,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/mailbox/mailbox.html" class="nav-link">
+                            <a href="{{route('user.index')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>List User</p>
                             </a>

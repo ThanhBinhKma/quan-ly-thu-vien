@@ -8,7 +8,7 @@
                     <img src="images/img-01.png" alt="IMG">
                 </div>
 
-                <form class="login100-form validate-form" action="{{ route('login') }}" method="POST">
+                <form class="login100-form validate-form" action="{{ route('user.login') }}" method="POST">
                     @csrf
 					<span class="login100-form-title">
 						Member Login
@@ -68,7 +68,7 @@
                     </div>
 
                     <div class="text-center p-t-136">
-                        <a class="txt2" href="">
+                        <a class="txt2" href="{{route('register')}}">
                             Create your Account
                             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                         </a>

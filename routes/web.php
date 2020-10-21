@@ -11,14 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
 
+Route::post('login','User\LoginController@index')->name('user.login');
+
 Route::group(['middleware'=>['verified']],function(){
-    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('logout','User\LoginController@logout')->name('user.logout');
+
+    Route::get('/home', 'User\HomeController@index')->name('user.home');
 
     Route::get('user','UserController@index')->name('user.index');
 });

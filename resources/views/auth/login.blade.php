@@ -8,14 +8,22 @@
                     <img src="images/img-01.png" alt="IMG">
                 </div>
 
-                <form class="login100-form validate-form" action="{{ route('login') }}" method="POST">
+                <form class="login100-form validate-form" action="{{ route('user.login') }}" method="POST">
                     @csrf
 					<span class="login100-form-title">
 						Member Login
 					</span>
-
-                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <input class="input100 @error('email') is-invalid @enderror" type="text" name="email" placeholder="Email" value="{{ old('email') }}" >
+                    @if(session('create'))
+                    <p class="text-success">Register Succuess . Please Check Mail!</p>
+                    @endif
+                    @if(session('confirm'))
+                    <p class="text-success">Confirm Mail Success . Please Login !</p>
+                    @endif
+                    @if(session('not_confirm'))
+                    <p class="text-danger">Please Confirm Mail !</p>
+                    @endif
+                    <div class="wrap-input100 ">
+                        <input class="input100" type="text" name="email" placeholder="Email" value="{{ old('email') }}" >
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
@@ -27,8 +35,8 @@
                         @enderror
                     </div>
 
-                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                        <input class="input100 @error('password') is-invalid @enderror" type="password" name="password" placeholder="Password">
+                    <div class="wrap-input100">
+                        <input class="input100" type="password" name="password" placeholder="Password">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -44,13 +52,17 @@
                         {!! Captcha::img() !!}
                     </div>
                     <div class="wrap-input100 text-center">
-                        <input type="text" class="input100 @error('captcha') is-invalid @enderror" name="captcha">
+                        <input type="text" class="input100" name="captcha">
                                                         @error('captcha')
                         <span class="invalid-feedback show-error-validate" role="alert">
                                                                 <strong>{{ $message }}</strong>
                                                             </span>
                         @enderror
                     </div>
+
+                    @if(session('status'))
+                        <p class="text-danger">Email or password is incorrect</p>
+                    @endif
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
                             Login
@@ -67,7 +79,7 @@
                     </div>
 
                     <div class="text-center p-t-136">
-                        <a class="txt2" href="">
+                        <a class="txt2" href="{{route('register')}}">
                             Create your Account
                             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                         </a>

@@ -6,19 +6,19 @@
         <div class="container-login100">
             <div class="wrap-login100">
                 <div class="login100-pic js-tilt" data-tilt>
-                    <img src="images/img-01.png" alt="IMG">
+                    <img src="{{asset('images/img-01.png')}}" alt="IMG">
                 </div>
-                @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                @endif
+            
                 <form class="login100-form validate-form" method="POST" action="{{ route('password.email') }}">
                     @csrf
 					<span class="login100-form-title">
-						Member Login
+						Reset Password
 					</span>
-
+                    @if (session('status'))
+                        <p class=" text-success" role="alert">
+                            {{ session('status') }}
+                        </p>
+                    @endif
                     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
                         <input class="input100  @error('email') is-invalid @enderror" type="text" name="email" placeholder="Email">
                         <span class="focus-input100"></span>

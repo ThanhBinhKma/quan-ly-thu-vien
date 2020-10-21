@@ -1,0 +1,1 @@
+Vui long xac nhan mail {{ $url}}

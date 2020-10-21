@@ -39,12 +39,4 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
-    public function login(Request  $request)
-    {
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            dd(123);
-            return redirect()->route('home');
-        }
-    }
 }

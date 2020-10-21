@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/','HomeController@index')->name('home');
 
 Auth::routes(['verify' => true]);
-
-Route::group(['middleware'=>['verified']],function(){
-    Route::get('/home', 'HomeController@index')->name('home');
-
+Route::post('user','User\LoginController@store')->name('user.store');
+Route::post('login','User\LoginController@index')->name('user.login');
+Route::get('confirm_register/{email}/{id}/{code}','User\LoginController@confirm');
+Route::group(['middleware'=>['checkLogin']],function(){
+    Route::get('logout','User\LoginController@logout')->name('user.logout');
+    Route::get('/home', 'User\HomeController@index')->name('user.home');
     Route::get('user','UserController@index')->name('user.index');
     Route::get('user/create','UserController@create')->name('user.create');
+    
 });

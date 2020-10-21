@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
 
 Auth::routes(['verify' => true]);
 
@@ -21,4 +19,5 @@ Route::group(['middleware'=>['verified']],function(){
     Route::get('/home', 'HomeController@index')->name('home');
 
     Route::get('user','UserController@index')->name('user.index');
+    Route::get('user/create','UserController@create')->name('user.create');
 });

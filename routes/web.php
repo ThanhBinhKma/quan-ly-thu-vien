@@ -28,12 +28,32 @@ Route::group(['middleware'=>['checkLogin']],function(){
     Route::get('user/create','UserController@create')->name('user.create');
 
 
-    Route::group(['prefix'=>'admin','namespace' => 'Admin'],function (){
+    Route::group(['middleware'=>'checkAdmin','prefix'=>'admin','namespace' => 'Admin'],function (){
+
         Route::get('user','UserController@index')->name('admin.user.index');
         Route::get('user/create','UserController@create')->name('admin.user.create');
         Route::post('user','UserController@store')->name('admin.user.store');
         Route::get('user/{id}/edit','UserController@edit')->name('admin.user.edit');
         Route::post('user/{id}','UserController@update')->name('admin.user.update');
         Route::get('user/{id}/delete','UserController@delete')->name('admin.user.delete');
+
+        Route::get('book','BookController@index')->name('admin.book.index');
+        Route::get('book/create','BookController@create')->name('admin.book.create');
+        Route::post('book','BookController@store')->name('admin.book.store');
+        Route::get('book/{id}/edit','BookController@edit')->name('admin.book.edit');
+        Route::post('book/{id}','BookController@update')->name('admin.book.update');
+        Route::get('book/{id}/delete','BookController@delete')->name('admin.book.delete');
+
+        Route::get('loan-slip','LoanSlipController@index')->name('admin.loan_slips.index');
+        Route::get('loan-slip/{id}','LoanSlipController@update')->name('admin.loan_slips.update');
+        Route::get('loan-slip/{id}/delete','LoanSlipController@delete')->name('admin.loan_slips.delete');
+    });
+    Route::group(['middleware'=>'checkUser','prefix'=>'user','namespace' => 'User'],function () {
+        Route::get('book','BookController@index')->name('user.book.index');
+
+        Route::get('loan-slip','LoanSlipController@index')->name('user.loan_slips.index');
+        Route::get('loan-slip/{id}','LoanSlipController@show')->name('user.loan_slips.show');
+        Route::get('loan-slip/create','LoanSlipController@create')->name('user.loan_slips.create');
+        Route::post('loan-slip','LoanSlipController@store')->name('user.loan_slips.store');
     });
 });

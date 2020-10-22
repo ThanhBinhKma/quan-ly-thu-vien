@@ -8,36 +8,12 @@
                     <img src="images/img-01.png" alt="IMG">
                 </div>
 
-                <form class="login100-form validate-form" action="{{ route('user.login') }}" method="POST">
+                <form class="login100-form validate-form" action="{{ route('resetpasswordPost') }}" method="POST">
                     @csrf
-					<span class="login100-form-title">
+                    <span class="login100-form-title">
 						Member Login
 					</span>
-                    @if(session('create'))
-                    <p class="text-success">Register Succuess . Please Check Mail!</p>
-                    @endif
-                    @if(session('change_password'))
-                    <p class="text-success">Change Password Success!</p>
-                    @endif
-                    @if(session('confirm'))
-                    <p class="text-success">Confirm Mail Success . Please Login !</p>
-                    @endif
-                    @if(session('not_confirm'))
-                    <p class="text-danger">Please Confirm Mail !</p>
-                    @endif
-                    <div class="wrap-input100 ">
-                        <input class="input100" type="text" name="email" placeholder="Email" value="{{ old('email') }}" >
-                        <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-							<i class="fa fa-envelope" aria-hidden="true"></i>
-						</span>
-                        @error('email')
-                        <span class="invalid-feedback show-error-validate" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                        @enderror
-                    </div>
-
+                    <input type="hidden" name="email" value="{{$email}}">
                     <div class="wrap-input100">
                         <input class="input100" type="password" name="password" placeholder="Password">
                         <span class="focus-input100"></span>
@@ -45,10 +21,18 @@
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
                         @error('password')
-                            <span class="invalid-feedback show-error-validate" role="alert">
+                        <span class="invalid-feedback show-error-validate" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
                         @enderror
+                    </div>
+
+                    <div class="wrap-input100">
+                        <input class="input100" type="password" name="password_confirmation" placeholder="Password">
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
                     </div>
 
                     <div class="wrap-input100 text-center">
@@ -56,7 +40,7 @@
                     </div>
                     <div class="wrap-input100 text-center">
                         <input type="text" class="input100" name="captcha">
-                                                        @error('captcha')
+                        @error('captcha')
                         <span class="invalid-feedback show-error-validate" role="alert">
                                                                 <strong>{{ $message }}</strong>
                                                             </span>

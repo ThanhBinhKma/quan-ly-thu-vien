@@ -9,7 +9,7 @@
                     <img src="{{asset('images/img-01.png')}}" alt="IMG">
                 </div>
 
-                <form method="POST" action="{{ route('password.update') }}">
+                <form method="POST" action="{{ route('user.forget') }}">
                     @csrf
                     <input type="hidden" name="token" value="{{ $token }}">
 					<span class="login100-form-title">
@@ -93,7 +93,7 @@
 {{--                            <div class="col-md-6">--}}
 {{--                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">--}}
 
-{{--                                
+{{--
 {{--                            </div>--}}
 {{--                        </div>--}}
 

@@ -5,27 +5,24 @@
         <!-- Content Header (Page header) -->
         <div class="content-header">
             <div class="container-fluid">
-                <div class="card">
-                    <div class="card-header">
-                        Quote
-                    </div>
-                    <div class="card-body">
-                        <a href="{{route('admin.book.create')}}" class="btn btn-primary"> Create Book</a>
-                    </div>
-                </div>
+
 
                 <div class="card">
                     <div class="card-header">
-                        List Book
+                        <div class="row">
+                            <div class="col-6">Danh sách sách</div>
+                            <div class="col-6 text-right">                        <a href="{{route('admin.book.create')}}" class="btn btn-primary"> Tạo Sách</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <table class="table">
                             <thead>
                             <th>ID</th>
-                            <th>Name Book</th>
-                            <th>Name Code</th>
-                            <th>Author</th>
-                            <th>Status</th>
+                            <th>Tên sách</th>
+                            <th>Mã sách</th>
+                            <th>Tác giả</th>
+                            <th>Trạng thái</th>
                             </thead>
                             <tbody>
                             @foreach($books  as $book)
@@ -44,14 +41,14 @@
 
                                     <td>
                                         @if($book->status == 0)
-                                            Het Sach
+                                            <p class="text-danger">Hết Sách</p>
                                         @endif
-                                        @if($book->status == 11)
-                                            Con Sach
+                                        @if($book->status == 1)
+                                            <p class="text-success">Còn Sách</p>
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{route('admin.book.delete',$book->id)}}" class="btn btn-danger">Delete</a>
+                                        <a href="{{route('admin.book.delete',$book->id)}}" class="btn btn-danger">Xóa</a>
                                     </td>
                                 </tr>
                             @endforeach

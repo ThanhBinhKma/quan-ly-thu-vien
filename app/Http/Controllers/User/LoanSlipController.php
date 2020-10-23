@@ -14,7 +14,7 @@ class LoanSlipController extends Controller
 {
     public function create()
     {
-        $books = Book::all();
+        $books = Book::where('status', 1)->get();
         return view('user.loan_slip.create', ['books' => $books]);
     }
 
@@ -41,8 +41,20 @@ class LoanSlipController extends Controller
 
     public function show($id)
     {
-        $loan_slip_books = LoanSlipBook::where('loan_slip_id',$id)->get();
+        $loan_slip_books = LoanSlipBook::where('loan_slip_id', $id)->get();
         $loan_slip = LoanSlip::find($id);
-        return view('user.loan_slip.show', ['loan_slip_books' => $loan_slip_books,'loan_slip' => $loan_slip]);
+        return view('user.loan_slip.show', ['loan_slip_books' => $loan_slip_books, 'loan_slip' => $loan_slip]);
+    }
+
+    public function getListBook()
+    {
+        $books = Book::where('status', 1)->get();
+        $option = '';
+        foreach ($books as $book)
+        {
+            $html = "<option value='".$book->id."'>".$book->book_code."</option>";
+            $option = $option.$html;
+        }
+        return response()->json(array('success' =>true,'data' => $option ));
     }
 }

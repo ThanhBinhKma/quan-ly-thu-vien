@@ -9,7 +9,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        Create User
+                        Tạo user
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{route('admin.user.store')}}">
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Tên</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="inputPassword"
                                           name="name">
@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-2 col-form-label">Role</label>
+                                <label for="" class="col-sm-2 col-form-label">Quyền</label>
                                 <div class="col-sm-10">
                                     <select name="role_id" id="" class="form-control">
                                         <option value="0">Student</option>

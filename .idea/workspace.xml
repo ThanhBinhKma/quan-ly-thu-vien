@@ -20,17 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27e43fd1-5cd8-4fbb-9a08-95db2f5fc96c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/book/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/book/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/book/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/loan_slips/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/book/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/loan_slip/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/loan_slip/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/user/loan_slip/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/loan_slips/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/loan_slips/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoanSlipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoanSlipController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/LoanSlipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/LoanSlipController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/loan_slips/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/loan_slips/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/forget.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/forget.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/resetPassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/resetPassword.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/aside.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/book/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/book/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/user/loan_slip/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/loan_slip/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,6 +194,8 @@
       <workItem from="1603286122741" duration="1707000" />
       <workItem from="1603365130481" duration="5163000" />
       <workItem from="1603379519604" duration="5716000" />
+      <workItem from="1603432638901" duration="5387000" />
+      <workItem from="1603457721044" duration="531000" />
     </task>
     <servers />
   </component>
@@ -202,18 +215,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603365462774">
+    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603455213461">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1603365462774" />
+    <state x="416" y="154" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1366.741@0.27.1366.741" timestamp="1603455213461" />
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603113452116">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1603113452116" />
-    <state x="374" y="135" width="618" height="522" key="find.popup" timestamp="1603110149613">
+    <state x="374" y="135" width="618" height="522" key="find.popup" timestamp="1603433312648">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="374" y="135" width="618" height="522" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1603110149613" />
+    <state x="374" y="135" width="618" height="522" key="find.popup/0.27.1366.741@0.27.1366.741" timestamp="1603433312648" />
     <state x="657" y="253" width="672" height="677" key="run.anything.popup" timestamp="1603382682078">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>

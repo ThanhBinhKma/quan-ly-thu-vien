@@ -7,24 +7,20 @@
             <div class="container-fluid">
                 <div class="card">
                     <div class="card-header">
-                        Quote
-                    </div>
-                    <div class="card-body">
-                        <a href="{{route('admin.user.create')}}" class="btn btn-primary"> Create User</a>
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-6">Danh Sách người dùng</div>
+                            <div class="col-6 text-right">                            <a href="{{route('admin.user.create')}}" class="btn btn-primary">Tạo người dùng</a>
+                            </div>
+                        </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        List User
                     </div>
                     <div class="card-body">
                         <table class="table">
                             <thead>
                             <th>ID</th>
-                            <th>Name</th>
-                            <th>Role</th>
-                            <th>Status</th>
+                            <th>Tên</th>
+                            <th>Quyền</th>
+                            <th>Trạng thái</th>
                             </thead>
                             <tbody>
                             @foreach($users  as $user)
@@ -47,14 +43,14 @@
 
                                     <td>
                                         @if($user->status == 0)
-                                            Binh thuong
+                                            Bình thường
                                         @endif
                                         @if($user->status == -1)
-                                            Dang Muon
+                                            Đang mượn
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{route('admin.user.delete',$user->id)}}" class="btn btn-danger">Delete</a>
+                                        <a href="{{route('admin.user.delete',$user->id)}}" class="btn btn-danger">Xóa</a>
                                     </td>
                                 </tr>
                             @endforeach

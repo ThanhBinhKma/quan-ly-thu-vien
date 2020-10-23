@@ -42,8 +42,18 @@
                         Create Book
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{route('user.loan_slips.store')}}">
+                        <form method="POST" action="{{route('admin.loan_slips.store')}}">
                             @csrf
+                            <div class="form-group row">
+                                <label for="" class="col-sm-2 col-form-label">User</label>
+                                <div class="col-sm-8">
+                                    <select name="user_id" id="" class="form-control">
+                                        @foreach($users as $user)
+                                            <option value="{{$user->id}}">{{$user->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                             <div class="haa">
                                 <div class="form-group row">
                                     <label for="" class="col-sm-2 col-form-label">Book Code</label>

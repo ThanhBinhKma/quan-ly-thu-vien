@@ -47,15 +47,10 @@
 
                                     <td>
                                         @if($book->status == 0)
-                                            Het Sach
+                                            <p class="text-danger">Het Sach</p>
                                         @endif
                                         @if($book->status == 1)
-                                            Con Sach
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($book->status == 1)
-                                            <a href="" class="btn btn-primary">Add Loan Slip</a>
+                                            <p class="text-success">Con Sach</p>
                                         @endif
                                     </td>
                                 </tr>

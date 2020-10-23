@@ -9,7 +9,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        Create User
+                        Cập nhật người dùng
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{route('admin.user.update',$user->id)}}">
@@ -39,23 +39,14 @@
                                 <label for="" class="col-sm-2 col-form-label">Role</label>
                                 <div class="col-sm-10">
                                     <select name="role_id" id="" class="form-control">
-                                        <option value="0" {{$user->role_id == 0 ? 'selected' : ''}}>Student</option>
-                                        <option value="1" {{$user->role_id == 1 ? 'selected' : ''}}>Admin</option>
-                                        <option value="2" {{$user->role_id == 2 ? 'selected' : ''}}>Teacher</option>
+                                        <option value="0" {{$user->role_id == 0 ? 'selected' : ''}}>Sinh viên</option>
+                                        <option value="1" {{$user->role_id == 1 ? 'selected' : ''}}>Quản trị</option>
+                                        <option value="2" {{$user->role_id == 2 ? 'selected' : ''}}>Giáo viên</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <label for="" class="col-sm-2 col-form-label">Role</label>
-                                <div class="col-sm-10">
-                                    <select name="status" id="" class="form-control">
-                                        <option value="0">Chua muon</option>
-                                        <option value="-1">Dang muon</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <button class="btn btn-primary text-center">Create</button>
+                            <button class="btn btn-primary text-center">Cập nhật</button>
                         </form>
                     </div>
                 </div>

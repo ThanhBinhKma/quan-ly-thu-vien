@@ -15,7 +15,7 @@
                         <form method="POST" action="{{route('admin.book.update',$book->id)}}">
                             @csrf
                             <div class="form-group row">
-                                <label for="staticEmail" class="col-sm-2 col-form-label">Book Name</label>
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Tên Sách</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="staticEmail"
                                            value="{{$book->book_name}}" name="book_name">
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Book Code</label>
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Mã Sách</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" value="{{$book->book_code}}" id="inputPassword"
                                            name="book_code">
@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Author</label>
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Tác giả</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" value="{{$book->author}}" id="inputPassword"
                                            name="author">
@@ -47,16 +47,16 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-2 col-form-label">Status</label>
+                                <label for="" class="col-sm-2 col-form-label">Trạng thái</label>
                                 <div class="col-sm-10">
                                     <select name="status" id="" class="form-control">
-                                        <option value="0" {{ $book->status == 0 ? 'selected' : '' }}>Het Sach</option>
-                                        <option value="1" {{ $book->status == 1 ? 'selected' : '' }}>Con Sach</option>
+                                        <option value="0" {{ $book->status == 0 ? 'selected' : '' }}>Hết Sách</option>
+                                        <option value="1" {{ $book->status == 1 ? 'selected' : '' }}>Còn Sách</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <button class="btn btn-primary text-center">Create</button>
+                            <button class="btn btn-primary text-center">Cập nhật</button>
                         </form>
                     </div>
                 </div>

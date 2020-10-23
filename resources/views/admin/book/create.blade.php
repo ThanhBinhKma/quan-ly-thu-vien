@@ -9,13 +9,13 @@
 
                 <div class="card">
                     <div class="card-header">
-                        Create Book
+                        Tạo sách
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{route('admin.book.store')}}">
                             @csrf
                             <div class="form-group row">
-                                <label for="staticEmail" class="col-sm-2 col-form-label">Book Name</label>
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Tên Sách</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="staticEmail"
                                            value="" name="book_name">
@@ -25,7 +25,7 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Book Code</label>
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Mã sách</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="inputPassword"
                                            name="book_code">
@@ -36,7 +36,7 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Author</label>
+                                <label for="inputPassword" class="col-sm-2 col-form-label">Tác giả</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" id="inputPassword"
                                            name="author">
@@ -47,16 +47,16 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="" class="col-sm-2 col-form-label">Status</label>
+                                <label for="" class="col-sm-2 col-form-label">Trạng thái</label>
                                 <div class="col-sm-10">
                                     <select name="status" id="" class="form-control">
-                                        <option value="0">Het Sach</option>
-                                        <option value="1">Con Sach</option>
+                                        <option value="0">Hết Sách</option>
+                                        <option value="1">Còn Sách</option>
                                     </select>
                                 </div>
                             </div>
 
-                            <button class="btn btn-primary text-center">Create</button>
+                            <button class="btn btn-primary text-center">Tạo</button>
                         </form>
                     </div>
                 </div>

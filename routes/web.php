@@ -35,6 +35,7 @@ Route::group(['middleware'=>['checkLogin']],function(){
         Route::post('user','UserController@store')->name('admin.user.store');
         Route::get('user/{id}/edit','UserController@edit')->name('admin.user.edit');
         Route::post('user/{id}','UserController@update')->name('admin.user.update');
+        Route::get('user/{id}','UserController@show')->name('admin.user.show');
         Route::get('user/{id}/delete','UserController@delete')->name('admin.user.delete');
 
         Route::get('book','BookController@index')->name('admin.book.index');
@@ -46,14 +47,20 @@ Route::group(['middleware'=>['checkLogin']],function(){
 
         Route::get('loan-slip','LoanSlipController@index')->name('admin.loan_slips.index');
         Route::get('loan-slip/{id}','LoanSlipController@update')->name('admin.loan_slips.update');
+        Route::get('loan-slip-create','LoanSlipController@create')->name('admin.loan_slips.create');
+        Route::post('loan-slip','LoanSlipController@store')->name('admin.loan_slips.store');
         Route::get('loan-slip/{id}/delete','LoanSlipController@delete')->name('admin.loan_slips.delete');
+        Route::get('loan-slip/{id}/show','LoanSlipController@show')->name('admin.loan_slips.show');
     });
     Route::group(['middleware'=>'checkUser','prefix'=>'user','namespace' => 'User'],function () {
         Route::get('book','BookController@index')->name('user.book.index');
 
         Route::get('loan-slip','LoanSlipController@index')->name('user.loan_slips.index');
-        Route::get('loan-slip/{id}','LoanSlipController@show')->name('user.loan_slips.show');
+        Route::get('loan-slip/{id}/show','LoanSlipController@show')->name('user.loan_slips.show');
         Route::get('loan-slip/create','LoanSlipController@create')->name('user.loan_slips.create');
         Route::post('loan-slip','LoanSlipController@store')->name('user.loan_slips.store');
+
+
     });
+    Route::post('get-list-book','User\LoanSlipController@getListBook')->name('user.loan_slips.getList');
 });

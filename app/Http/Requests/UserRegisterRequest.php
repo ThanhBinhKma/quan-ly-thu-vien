@@ -26,7 +26,7 @@ class UserRegisterRequest extends FormRequest
         return [
             'email' => 'required|email|unique:users',
             'name' => 'required',
-            'mssv' => 'required',
+            'mssv' => 'required|regex:/(^[ACD]T[0-9]{6}$)/',
             'password' => 'required|confirmed|min:6|regex:((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})',
             'password_confirmation' => 'required'
         ];

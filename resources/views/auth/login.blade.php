@@ -51,17 +51,7 @@
                         @enderror
                     </div>
 
-                    <div class="wrap-input100 text-center">
-                        {!! Captcha::img() !!}
-                    </div>
-                    <div class="wrap-input100 text-center">
-                        <input type="text" class="input100" name="captcha">
-                                                        @error('captcha')
-                        <span class="invalid-feedback show-error-validate" role="alert">
-                                                                <strong>{{ $message }}</strong>
-                                                            </span>
-                        @enderror
-                    </div>
+                
 
                     @if(session('status'))
                         <p class="text-danger">Email or password is incorrect</p>

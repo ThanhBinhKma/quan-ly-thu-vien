@@ -24,15 +24,14 @@ class ResetPasswordRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required|email',
-            'captcha' => 'required|captcha'
+            'email' => 'required|email'
         ];
     }
 
     public function messages()
     {
         return [
-            'captcha.captcha' => 'Captcha entered incorrectly. Please re-enter!'
+         
         ];
     }
 }

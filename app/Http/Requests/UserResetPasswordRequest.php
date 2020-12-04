@@ -24,15 +24,13 @@ class UserResetPasswordRequest extends FormRequest
     public function rules()
     {
         return [
-            'password' => 'required|confirmed|min:6|regex:((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})',
-            'captcha'  => 'required|captcha'
+            'password' => 'required|confirmed|min:6|regex:((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})'
         ];
     }
 
     public function messages()
     {
         return [
-            'captcha.captcha'=>'Captcha entered incorrectly. Please re-enter!',
             'password.regax' => 'The password you have entered is not in the correct format'
         ];
     }

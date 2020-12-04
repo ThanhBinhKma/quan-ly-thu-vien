@@ -28,15 +28,13 @@ class UserRegisterRequest extends FormRequest
             'name' => 'required',
             'mssv' => 'required',
             'password' => 'required|confirmed|min:6|regex:((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})',
-            'password_confirmation' => 'required',
-            'captcha' => 'required|captcha'
+            'password_confirmation' => 'required'
         ];
     }
 
     public function messages()
     {
         return [
-          'captcha.captcha'=>'Captcha entered incorrectly. Please re-enter!',
           'password.regax' => 'The password you have entered is not in the correct format'
         ];
     }

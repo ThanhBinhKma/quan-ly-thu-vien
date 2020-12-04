@@ -24,7 +24,6 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'captcha'  => 'required|captcha',
             'email' => 'required|email',
             'password' => 'required'
         ];
@@ -33,7 +32,6 @@ class LoginRequest extends FormRequest
     public function messages()
     {
         return [
-          'captcha.captcha'=>'Captcha entered incorrectly. Please re-enter!'
         ];
     }
 }

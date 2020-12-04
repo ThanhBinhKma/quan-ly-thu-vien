@@ -43,18 +43,20 @@ class LoginController extends Controller
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->role_id = 0;
+        $user->status = 1;
+        $user->email_verified_at = Carbon::now();
         $user->save();
         $request->session()->flash('create', 'true');
 
-        $codeMail = new CodeMail;
-        $codeMail->user_id = $user->id;
-        $codeMail->code = Str::random(6);
-        $codeMail->save();
-        $data = [
-            'user' => $user,
-            'codeMail' => $codeMail
-        ];
-        Mail::to($user->email)->send(new RegisterUser($data));
+//        $codeMail = new CodeMail;
+//        $codeMail->user_id = $user->id;
+//        $codeMail->code = Str::random(6);
+//        $codeMail->save();
+//        $data = [
+//            'user' => $user,
+//            'codeMail' => $codeMail
+//        ];
+//        Mail::to($user->email)->send(new RegisterUser($data));
         return redirect()->route('user.login');
     }
 

@@ -20,29 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27e43fd1-5cd8-4fbb-9a08-95db2f5fc96c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/loan_slips/create.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/loan_slips/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/user/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoanSlipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoanSlipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/LoanSlipController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/LoanSlipController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/CheckLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/book/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/book/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/loan_slips/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/loan_slips/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/user/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/forget.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/forget.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/resetPassword.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/resetPassword.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/aside.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/aside.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/book/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/book/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/user/loan_slip/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/user/loan_slip/create.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/LoginController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +175,7 @@
       <workItem from="1603379519604" duration="5716000" />
       <workItem from="1603432638901" duration="5387000" />
       <workItem from="1603457721044" duration="531000" />
+      <workItem from="1607073285454" duration="379000" />
     </task>
     <servers />
   </component>

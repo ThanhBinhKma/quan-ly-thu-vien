@@ -27,15 +27,16 @@ class UserRegisterRequest extends FormRequest
             'email' => 'required|email|unique:users',
             'name' => 'required',
             'mssv' => 'required|regex:/(^[ACD]T[0-9]{6}$)/',
-            'password' => 'required|confirmed|min:6|regex:((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20})',
-            'password_confirmation' => 'required'
+            'password' => 'required|confirmed|min:6|regex:((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[#?!@$%^&*-]).{6,20})',
+            'password_confirmation' => 'required',
+            'phone' => 'required|regex:'
         ];
     }
 
     public function messages()
     {
         return [
-          'password.regax' => 'The password you have entered is not in the correct format'
+            'password.regax' => 'The password you have entered is not in the correct format'
         ];
     }
 }
